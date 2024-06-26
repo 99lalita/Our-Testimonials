@@ -1,13 +1,17 @@
-import "./App.css";
+import React from "react";
+import Testimonial from "./Components/Testimonial.jsx";
+import reviews from "./data";
 
-function App() {
+const App = () => {
   return (
-    <main className="flex justify-center gap-4 flex-col min-h-screen">
-      <h1 className="text-3xl text-center font-bold underline">React & Tailwind CSS Starter Pack</h1>
-      <p className="text-center text-xl">This is a starter pack for React & Tailwind CSS projects.</p>
-      <img src="https://bit.ly/3wsmzTy" alt="meme" className="mx-auto" />
-    </main>
+    <div className="flex flex-col w-[100vw] h-[100vh] justify-center items-center bg-gray-200">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold">Our Testimonial</h1>
+        <div className="bg-violet-400 h-[4px] w-1/5 mt-1 mx-auto"></div>
+        <Testimonial reviews = {reviews}/>
+      </div>
+    </div>
   );
-}
+};
 
 export default App;
